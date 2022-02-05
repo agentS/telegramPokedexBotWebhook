@@ -12,8 +12,7 @@ namespace eu.mauerkids.pokedexbot.bot.command
         {
             await botClient.SendTextMessageAsync(
                 chatId: message.Chat,
-                text: $"Hello, {message.From.FirstName}! I'm the Pokédex Bot. Supported commands are /start, /help, and /battle <name or ID>.",
-                parseMode: ParseMode.Default
+                text: $"Hello, {message.From.FirstName}! I'm the Pokédex Bot. Supported commands are /start, /help, and /battle <name or ID>."
             );
         }
     }

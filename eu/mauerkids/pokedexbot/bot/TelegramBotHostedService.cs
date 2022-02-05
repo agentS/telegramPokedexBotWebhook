@@ -30,12 +30,12 @@ namespace eu.mauerkids.pokedexbot.bot
                 this._webhookUrl,
                 cancellationToken: cancellationToken
             );
-            Console.WriteLine("Registered the webhook.");
+            Console.WriteLine($"Registered the webhook at {this._webhookUrl}");
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
         {
-            await this._botClient.DeleteWebhookAsync(cancellationToken);
+            await this._botClient.DeleteWebhookAsync(dropPendingUpdates: true, cancellationToken);
             Console.WriteLine("Deleted the webhook.");
         }
     }

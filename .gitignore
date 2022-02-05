@@ -434,3 +434,5 @@ $RECYCLE.BIN/
 
 appsettings.json
 appsettings.Development.json
+appsettings.Release.json
+appsettings.Production.json
